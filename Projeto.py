@@ -50,10 +50,10 @@ while hp > 0:
 
         if acao == 1:
             print("\nVocê ataca corajosamente e vence, mas sofre ferimentos.")
-            hp -= 3
+            hp -= 5
         elif acao == 2:
             print("\nVocê se defende e perde pouca vida.")
-            hp -= 1
+            hp -= 3
         elif acao == 3:
             print(f"\nJogador(a) {nome} foge covardemente e abandona a missão.")
             print(f"\nFinal neutro! {nome} o {classe} desistiu da busca pelo tesouro.")
@@ -77,7 +77,7 @@ while hp > 0:
 
             if chute != numero_secreto:
                 print("Errado! Tente novamente...")
-        print(f"\nParabéns! Você conseguiu abrir o baú em {tentativa} tentativas. Dentro dele você achou uma porção de vida")
+        print(f"\nParabéns! Você conseguiu abrir o baú em {tentativa} tentativas. Dentro dele você achou uma poção de vida")
         hp += 2
         print(f"Sua vida aumentou para {hp} pontos.")
 
