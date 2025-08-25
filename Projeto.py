@@ -2,7 +2,7 @@ import random
 
 print ("=====JOGO DE AVENTURA: EM BUSCA DO TESOURO PERDIDO=====")
 
-#Introdução do game para escolher as características dos personagens
+
 nome  = input("\nDigite seu nome de usuário: ")
 
 print("\nSelecione sua classe: \n")
@@ -22,14 +22,14 @@ if classe == 3:
     classe = str("Arqueiro")
 
 
-hp = int(10) #Pontos inicais de vida
+hp = int(10) 
 
 print(f"\nSeja Bem-Vindo! Sr(a) {nome} o(a) grande {classe}. Sua jornada começa agora!")
 print(f"Você começa com {hp} pontos de vida.\n")
 
 print(f"Há muitas eras, um tesouro lendário foi escondido nas profundezas da Floresta Sombria. Muitos guerreiros tentaram, mas nenhum retornou. Agora, {nome} o(a) grande {classe}, parte de sua vila com coragem no coração e apenas uma missão: conquistar o tesouro perdido!\n")
 
-#LOOP Principal
+
 while hp > 0:
     print(f"Seguindo pela floresta {nome} se depara com a entrada de uma caverna. Diante disso você escolhe:\n")
     print("1 - Entrar na caverna")
@@ -37,7 +37,7 @@ while hp > 0:
 
     escolha = int(input("\nEscreva sua decisão: "))
 
-    #Sistema de escolhas
+
     if escolha == 1:
 
         print(f"\n{nome} entra na caverna... O ar fica denso, as tochas apagam sozinhas e o som de passos pequenos ecoa... De repente,")
@@ -60,13 +60,13 @@ while hp > 0:
             break
         else:
             print("\nEscolha inválida! O inimigo aproveitou a situação e te atacou.")
-            hp -= 4
+            hp -= 7
     
     elif escolha == 2:
         print("\nJogador(a) decide seguir pela floresta... O vento sopra forte entre as árvores. Você sente que está sendo observado... Até que entre troncos retorcidos encontra um baú antigo que está trancado")
         print("Para abrir o baú você deve adivinhar o número secreto que está entre 1 e 5!\n")
 
-        #Laço para tentar adivinhar o número
+
         numero_secreto = random.randint(1,5)
         tentativa = 0
         chute = 0
@@ -81,7 +81,7 @@ while hp > 0:
         hp += 2
         print(f"Sua vida aumentou para {hp} pontos.")
 
-    #Verificando se o jogador morreu
+
     if hp <= 0:
         print(f"Game Over! {nome} o {classe} não resistiu a missão e acabou falecendo...")
         break
